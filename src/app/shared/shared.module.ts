@@ -15,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NavbarComponent
   ]
 })
 export class SharedModule { }

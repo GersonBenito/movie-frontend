@@ -1,0 +1,24 @@
+.contenedor-principal{
+    background-image: url('../../../../assets/images/3.jpg');
+    background-size: cover;
+    // background-repeat: round;
+    height: 100vh;
+}
+
+.informacion-sitio-web{
+    width: 30%;
+    padding: 32px;
+}
+
+.contenedor-boton{
+    margin-top: 16px;
+    width: 50%;
+    .boton{
+        background-color: #BE123C;
+        color: #FFFFFF;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+}

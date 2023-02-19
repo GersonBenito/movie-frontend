@@ -6,6 +6,7 @@ import { PopularityComponent } from './pages/popularity/popularity.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
 import { ViewMoviesComponent } from './pages/view-movies/view-movies.component';
 import { MovieRoutingModule } from './movie.routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +20,8 @@ import { MovieRoutingModule } from './movie.routing.module';
   ],
   imports: [
     CommonModule,
-    MovieRoutingModule
+    MovieRoutingModule,
+    SharedModule
   ]
 })
 export class MovieModule { }

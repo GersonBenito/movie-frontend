@@ -1,1 +1,55 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" (click)="redirectTo('')">
+        <img src="../../../assets/svg/logo.svg" width="24" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" (click)="redirectTo('')">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="redirectTo('/movie')">Peliculas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="redirectTo('/user')">Usuarios</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categorias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item">Accion</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item">Suspenso</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item">Ciencia ficcion</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <div class="input-group mr-sm-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="../../../assets/svg/search.svg" alt="search">
+                  </span>
+                </div>
+                <input type="text" class="form-control buscador" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <button 
+                class="btn btn-outline-info my-2 my-sm-0 login" 
+                type="button" 
+                (click)="redirectTo('/auth')"
+                >
+                Loguearse
+            </button>
+        </form>
+    </div>
+</nav>

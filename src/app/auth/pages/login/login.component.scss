@@ -40,7 +40,7 @@ input{
 }
 
 input.ng-invalid.ng-touched{
-    border-bottom: 1px solid rgb(185, 22, 22) !important;
+    border-bottom: 1px solid #BE123C !important;
 }
 
 
@@ -66,7 +66,7 @@ input.ng-invalid.ng-touched{
     margin-top: 16px;
     button{
         border: none;
-        background-color: #060606;
+        background-color: #BE123C;
         color: #FCFCFC;
         width: 100%;
         padding: 8px;

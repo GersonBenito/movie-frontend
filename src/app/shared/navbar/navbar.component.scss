@@ -1,0 +1,26 @@
+.navbar{
+    border-bottom: 2px solid #535F77;
+}
+
+.input-group-text{
+    background: #192642;
+    border: none;
+    border-radius: 18px 0px 0px 18px;
+}
+
+.buscador{
+    border: none;
+    background: #192642;
+    border-radius: 0px 18px 18px 0px;
+    outline: none !important;
+    color: #CDCDCD;
+    padding: 8px 14px 8px 0px;
+
+    &:focus{
+        outline: none !important;
+        box-shadow: none;
+    }
+    &::placeholder{
+        color: #CDCDCD;
+    }
+}
