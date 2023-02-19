@@ -24,12 +24,10 @@ export class RegisterComponent {
 
   registrarUsuario(): void{
     console.log(this.formRegistro.value);
-    this.navigateToLogin();
+    // this.navigateToLogin();
   }
 
   navigateToLogin(){
-    setTimeout(() =>{
-      this._authService.$typeView.next('login');
-    },3000)
+    this._authService.$typeView.next('login');
   }
 }
