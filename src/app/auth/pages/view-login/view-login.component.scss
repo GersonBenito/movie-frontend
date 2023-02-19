@@ -1,0 +1,23 @@
+.container-full{
+    background-image: url('../../../../assets/images/4.jpg');
+    height: 100vh;
+    background-size: contain;
+}
+
+.content{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.section-description{
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    color: #fff;
+}
+
+.section-login{
+    background-color: rgba(41, 41, 41, 0.39);
+    backdrop-filter: blur(50px);
+}

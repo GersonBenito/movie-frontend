@@ -1,1 +1,31 @@
-<p>view-login works!</p>
+<div class="container-full">
+    <div class="content">
+        <div class="section-description">
+            <ng-container *ngTemplateOutlet="section_description"></ng-container>
+        </div>
+        <div class="section-login">
+            <ng-container *ngTemplateOutlet="login"></ng-container>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #login>
+    <app-login></app-login>
+</ng-template>
+
+<ng-template #register>
+    <app-register></app-register>
+</ng-template>
+
+<ng-template #section_description>
+    <div class="contanten-description">
+        <div class="primary-title">
+            Turn your ideas into reality
+        </div>
+        <div class="primary-subtitle">
+            Start for free and get attractive offers from the community
+        </div>
+    </div>
+</ng-template>
