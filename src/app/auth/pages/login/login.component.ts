@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
+    private _authService: AuthService,
   ){
 
     this.formLogin = this.fb.group({
@@ -22,6 +24,10 @@ export class LoginComponent {
 
   login(): void{
     console.log(this.formLogin.value);
+  }
+
+  register(){
+    this._authService.$typeView.next('register');
   }
 
 }

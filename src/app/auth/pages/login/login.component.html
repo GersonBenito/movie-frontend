@@ -7,23 +7,22 @@
             ¡Bienvenido de nuevo! Por favor, introduzca sus datos.
         </div>
         <div class="formulario">
-            <form [formGroup]="formLogin" (ngSubmit)="login()">
+            <form [formGroup]="formLogin" (ngSubmit)="login()" autocomplete="off">
                 <div class="form-input">
-                    <input type="text" formControlName="email" placeholder="Email">
+                    <input type="text" formControlName="email" placeholder="Email" autocomplete="off">
                 </div>
                 <div class="form-input">
                     <input type="password" formControlName="password" placeholder="Password">
                 </div>
                 <div class="forgot">
-                    <!-- TODO: agregar router link -->
-                    <a>Recuperar contraña</a>
+                    <span>Recuperar contraña</span>
                 </div>
                 <div class="boton-login">
                     <button type="submit" [disabled]="!formLogin.valid">Iniciar sesion</button>
                 </div>
 
                 <div class="register">
-                    ¿No tienes una cuenta? <a>Registrate gratis</a>
+                    ¿No tienes una cuenta? <span (click)="register()">Registrate gratis</span>
                 </div>
             </form>
         </div>

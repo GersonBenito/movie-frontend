@@ -1,1 +1,26 @@
-<p>register works!</p>
+<div class="primary-container">
+    <div class="container">
+        <div class="primary-title">
+            Registro
+        </div>
+        <div class="second-subtitle">
+            ¡Bienvenido al registro de usuario
+        </div>
+        <div class="formulario">
+            <form [formGroup]="formRegistro" autocomplete="off" (ngSubmit)="registrarUsuario()">
+                <div class="form-input">
+                    <input type="text" formControlName="nombre_usuario" placeholder="Nombre de usuario">
+                </div>
+                <div class="form-input">
+                    <input type="text" formControlName="email" placeholder="Email">
+                </div>
+                <div class="form-input">
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                <div class="boton-registro">
+                    <button type="submit" [disabled]="!formRegistro.valid">Registrase</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

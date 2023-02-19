@@ -4,12 +4,10 @@
             <ng-container *ngTemplateOutlet="section_description"></ng-container>
         </div>
         <div class="section-login">
-            <ng-container *ngTemplateOutlet="login"></ng-container>
+            <ng-container [ngTemplateOutlet]="view === 'login' ? login : register"></ng-container>
         </div>
     </div>
 </div>
-
-
 
 <ng-template #login>
     <app-login></app-login>
