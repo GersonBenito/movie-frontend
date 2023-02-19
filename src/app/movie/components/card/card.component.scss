@@ -1,0 +1,13 @@
+.card{
+    border: none;
+    background: #192642;
+    height: 100%;
+    .card-title{
+        font-size: 16px;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}

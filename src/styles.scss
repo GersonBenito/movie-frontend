@@ -6,8 +6,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+$family: 'Poppins', sans-serif;
+
 .primary-title{
-    font-family: 'Manrope', sans-serif;
+    font-family: $family;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -16,7 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .primary-subtitle{
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: $family;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -25,7 +27,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .second-subtitle{
-    font-family: 'Space Grotesk';
+    font-family: $family;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

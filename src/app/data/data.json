@@ -1,0 +1,64 @@
+{
+    "data":[
+        {
+         "id_pelicula": 1,
+         "titulo": "El gato con botas: el último deseo",
+         "descripcion": "El Gato con Botas descubre que su pasión por la aventura le ha pasado factura: ha quemado ocho de sus nueve vidas, dejándole solo una. Puss emprende un viaje épico para encontrar el último deseo mítico y restaurar sus nueve vidas.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/67/76/67765b91d15e2bc107cb7d6cde8f65bc/67765b91d15e2bc107cb7d6cde8f65bc.jpg",
+         "precio_compra": 2.99,
+         "disponibilidad": true,
+         "stock": 10,
+         "fecha_actualizacion": "2/19/2023"
+        },
+        {
+         "id_pelicula": 2,
+         "titulo": "Ant-Man y la Avispa: Quantumania",
+         "descripcion": "El dúo de superhéroes Scott Lang y Hope Van Dyne, junto con los padres de Hope, Hank Pym y Janet Van Dyne, se encuentran explorando el reino cuántico, interactuando con extrañas criaturas nuevas y embarcándose en una aventura que los llevará más allá de los límites de lo que pensaban que era. posible.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/15/72/157230aae215c32f802b4c904d14e4eb/157230aae215c32f802b4c904d14e4eb.jpg",
+         "precio_compra": 2,
+         "disponibilidad": true,
+         "stock": 3,
+         "fecha_actualizacion": "2/19/2023"
+        },
+        {
+         "id_pelicula": 3,
+         "titulo": "Avatar: El camino del agua",
+         "descripcion": "Ambientada más de una década después de los eventos de la primera película, “Avatar: The Way of Water” comienza a contar la historia de la familia Sully (Jake, Neytiri y sus hijos), los problemas que los persiguen, hasta dónde llegan. para mantenerse a salvo, las batallas que luchan para mantenerse con vida y las tragedias que soportan.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/1e/c6/1ec694a9d587d509ec7a9be815aacfac/1ec694a9d587d509ec7a9be815aacfac.jpg",
+         "precio_compra": 5.99,
+         "disponibilidad": true,
+         "stock": 9,
+         "fecha_actualizacion": "2/19/2023"
+        },
+        {
+         "id_pelicula": 4,
+         "titulo": "The Batman",
+         "descripcion": "Una historia de cine negro impulsada por el punto de vista con un fuerte enfoque en el trabajo de detective de Batman. Una historia independiente sin conexión con el DCEU.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/21/2d/212d2d95b9d515504a4de227d49a769f/212d2d95b9d515504a4de227d49a769f.jpg",
+         "precio_compra": 2.99,
+         "disponibilidad": true,
+         "stock": 5,
+         "fecha_actualizacion": "2/19/2023"
+        },
+        {
+         "id_pelicula": 5,
+         "titulo": "Black Adam",
+         "descripcion": "Casi 5000 años después de que se le concedieran los poderes todopoderosos de los dioses egipcios, y encarcelado con la misma rapidez, Black Adam es liberado de su tumba terrenal, listo para desatar su forma única de justicia en el mundo moderno.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/15/1b/151b961f5343bebb7f434f3060079d97/151b961f5343bebb7f434f3060079d97.jpg",
+         "precio_compra": 9.99,
+         "disponibilidad": true,
+         "stock": 4,
+         "fecha_actualizacion": "2/19/2023"
+        },
+        {
+         "id_pelicula": 6,
+         "titulo": "Transformadores: El origen de las bestias",
+         "descripcion": "Una aventura trotamundos de los años 90 que presenta a los Maximals, Predacons y Terrorcons en la batalla existente en la tierra entre Autobots y Decepticons.",
+         "imagen": "https://img.watchseriesstream.com/xxrz/250x400/225/41/f4/41f4ea1916eda950765bc004bab39334/41f4ea1916eda950765bc004bab39334.jpg",
+         "precio_compra": 10.99,
+         "disponibilidad": true,
+         "stock": 2,
+         "fecha_actualizacion": "2/19/2023"
+        }
+     ]
+}
