@@ -39,6 +39,11 @@ input{
     }
 }
 
+input.ng-invalid.ng-touched{
+    border-bottom: 1px solid rgb(185, 22, 22) !important;
+}
+
+
 .form-input{
     margin-top: 16px;
 }
@@ -73,9 +78,9 @@ input{
         color: #FCFCFC;
         border-radius: 5px;
         cursor: pointer;
-        
-        &:hover{
-            background: #141313;
+
+        &:disabled{
+            cursor: no-drop;
         }
     }
 }

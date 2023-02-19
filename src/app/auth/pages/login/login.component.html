@@ -4,22 +4,22 @@
             Bienvenido
         </div>
         <div class="second-subtitle">
-            Welcome back! Please enter your details.
+            ¡Bienvenido de nuevo! Por favor, introduzca sus datos.
         </div>
         <div class="formulario">
-            <form>
+            <form [formGroup]="formLogin" (ngSubmit)="login()">
                 <div class="form-input">
-                    <input type="text" placeholder="Email">
+                    <input type="text" formControlName="email" placeholder="Email">
                 </div>
                 <div class="form-input">
-                    <input type="text" placeholder="Password">
+                    <input type="password" formControlName="password" placeholder="Password">
                 </div>
                 <div class="forgot">
                     <!-- TODO: agregar router link -->
                     <a>Recuperar contraña</a>
                 </div>
                 <div class="boton-login">
-                    <button type="submit">Iniciar sesion</button>
+                    <button type="submit" [disabled]="!formLogin.valid">Iniciar sesion</button>
                 </div>
 
                 <div class="register">
