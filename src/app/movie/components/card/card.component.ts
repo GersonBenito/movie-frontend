@@ -1,5 +1,6 @@
 import { Input } from '@angular/core';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from '../../interfaces/movie.interface';
 
 @Component({
@@ -20,8 +21,12 @@ export class CardComponent {
     stock: 0
   }
   
-  constructor(){
+  constructor( private router: Router ){
 
+  }
+
+  verDetalles(id: number): void {
+    this.router.navigate(['/movie/detalle', id]);
   }
 
 }

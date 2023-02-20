@@ -18,8 +18,8 @@
                     <input type="password" formControlName="password" placeholder="Password">
                 </div>
                 <div class="boton-registro">
-                    <button class="cancelar" type="button" (click)="navigateToLogin()">Cancelar</button>
-                    <button type="submit" [disabled]="!formRegistro.valid">Registrarse</button>
+                    <button class="boton secundario" type="button" (click)="navigateToLogin()">Cancelar</button>
+                    <button class="boton primario" type="submit" [disabled]="!formRegistro.valid">Registrarse</button>
                 </div>
             </form>
         </div>

@@ -1,0 +1,95 @@
+<div class="contenerdo-principal">
+    <app-navbar></app-navbar>
+    <div class="contenedor">
+        <ng-content *ngTemplateOutlet="section_imagen"></ng-content>
+        <ng-content *ngTemplateOutlet="section_info"></ng-content>
+    </div>
+</div>
+
+
+<ng-template #section_imagen>
+    <div class="card" style="width: 300px;">
+        <img class="card-img-top" [src]="movie.imagen" [alt]="movie.titulo">
+        <div class="card-body">
+            <a href="https://www.youtube.com/watch?v=7afDrYLajRk" target="_blank">
+                <button 
+                    type="button" 
+                    class="boton-trailer" 
+                >
+                    <img src="assets/svg/cine.svg" width="16" alt="cine">
+                    Trailer
+                </button>
+            </a>
+            <div class="seccion mt-3 d-flex justify-content-between">
+                <div class="text-center">
+                    <div class="numero">
+                        <img 
+                            (click)="likeMovie()" 
+                            src="{{like ? 'assets/svg/like.svg':'assets/svg/unlike.svg'}}" 
+                            width="20" 
+                            alt="like"
+                        >
+                    </div>
+                    <div class="tipo mt-2">Like</div>
+                </div>
+                <div class="text-center">
+                    <div class="numero">{{movie.stock}}</div>
+                    <div class="tipo mt-2">Stock</div>
+                </div>
+                <div class="text-center">
+                    <div class="numero">100%</div>
+                    <div class="tipo mt-2">Polularidad</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #section_info>
+    <div class="contanedor-info-datos-generales">
+        <div class="contenedor-info">
+            <div class="primary-title">
+                <p>{{movie.titulo}}</p>
+            </div>
+            <div class="acciones">
+                <button (click)="alquilarMovie()" class="boton secundario">Alquilar</button>
+                <button (click)="comprarPelicula()" class="boton primario">Comprar</button>
+            </div>
+            <div class="descripcion">
+                <div class="primary-subtitle mt-3">
+                    <p>Descripcion</p>
+                </div>
+                <div>
+                    <p>{{movie.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        <ng-content *ngTemplateOutlet="section_datos_generales"></ng-content>
+    </div>
+</ng-template>
+
+<ng-template #section_datos_generales>
+    <hr class="mt-2 mb-2 dropdown-divider">
+    <div class="contanedor-datos-generales text-white second-subtitle">
+        <div class="d-flex pag-5">
+            <div class="titulo mr-2">Disponible:</div>
+            <div class="value">{{ movie.disponibilidad ? 'Si': 'No'}}</div>
+        </div>
+        <div class="d-flex mt-2">
+            <div class="titulo mr-2">Precio compra:</div>
+            <div class="value">{{movie.precio_compra | currency}}</div>
+        </div>
+        <div class="d-flex mt-2">
+            <div class="titulo mr-2">Precio alquiler:</div>
+            <div class="value">$5</div>
+        </div>
+        <div class="d-flex mt-2">
+            <div class="titulo mr-2">Fecha actualizacion:</div>
+            <div class="value">{{movie.fecha_actualizacion}}</div>
+        </div>
+        <div class="d-flex mt-2">
+            <div class="titulo mr-2">Actualizado por:</div>
+            <div class="value">Gerson Benito</div>
+        </div>
+    </div>
+</ng-template>

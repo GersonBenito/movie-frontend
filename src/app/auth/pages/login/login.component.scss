@@ -64,29 +64,6 @@ input.ng-invalid.ng-touched{
     }
 }
 
-.boton-login{
-    margin-top: 16px;
-    button{
-        border: none;
-        background-color: #BE123C;
-        color: #FCFCFC;
-        width: 100%;
-        padding: 8px;
-        font-family: $family;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: #FCFCFC;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:disabled{
-            cursor: no-drop;
-        }
-    }
-}
-
 .register{
     color: #FCFCFC;
     margin-top: 16px;

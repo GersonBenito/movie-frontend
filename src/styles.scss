@@ -34,3 +34,29 @@ $family: 'Poppins', sans-serif;
     line-height: 26px;
     color: #FFFFFF;
 }
+
+.boton{
+    border: none;
+    color: #FCFCFC;
+    width: 100%;
+    padding: 8px;
+    font-family: $family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FCFCFC;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:disabled{
+        cursor: no-drop;
+    }
+}
+
+.primario{
+    background-color: #BE123C;
+}
+.secundario{
+    background-color: #535F77;
+}

@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./movie/movie.module').then( m => m.MovieModule),
   },
   {
+    path: 'administration',
+    loadChildren: () => import('./admin/administracion.module').then( m => m.AdministracionModule),
+  },
+  {
       path: '**',
       redirectTo: ''
   }

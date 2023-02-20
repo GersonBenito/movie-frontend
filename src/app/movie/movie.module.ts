@@ -8,7 +8,7 @@ import { ViewMoviesComponent } from './pages/view-movies/view-movies.component';
 import { MovieRoutingModule } from './movie.routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { CardMovieComponent } from './components/card-movie/card-movie.component';
-import { DetailsMovieComponent } from './components/details-movie/details-movie.component';
+import { DetailsMovieComponent } from './pages/details-movie/details-movie.component';
 import { CardComponent } from './components/card/card.component';
 
 
