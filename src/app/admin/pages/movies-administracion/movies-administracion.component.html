@@ -1,1 +1,69 @@
-<p>movies-administracion works!</p>
+<div class="contenedor-principal">
+    <app-navbar [viewSearch]="false"></app-navbar>
+    <div class="contenedor mt-5 p-3">
+        <ng-content *ngTemplateOutlet="tabla"></ng-content>
+    </div>
+</div>
+
+
+<ng-template #tabla>
+    <div class="contenedor-tabla">
+        <ng-content *ngTemplateOutlet="acciones"></ng-content>
+        <table class="table table-bordered">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">#</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Compra</th>
+                <th scope="col">Alquiler</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Disponibilidad</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let movie of movies" class="text-center">
+                <th scope="row">{{movie.id_pelicula}}</th>
+                <td>
+                    <img [src]="movie.imagen" width="40" [alt]="movie.titulo">
+                </td>
+                <td class="text-left">{{movie.titulo}}</td>
+                <td>{{movie.precio_compra}}</td>
+                <!-- TODO: Agregar precio alquiler -->
+                <td>10</td>
+                <td>{{movie.stock}}</td>
+                <td>{{movie.disponibilidad === true ? 'Si':'No'}}</td>
+                <td>
+                    <div class="acciones">
+                        <button class="boton secundario d-flex justify-content-center align-items-center">
+                            <img src="assets/svg/update.svg" width="14" alt="update">
+                            Actualizar
+                        </button>
+                        <button class="boton primario d-flex justify-content-center align-items-center">
+                            <img src="assets/svg/delete.svg" width="14" alt="update">
+                            Borrar
+                        </button>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-template>
+
+<ng-template #acciones>
+    <div class="contanedor-acciones mb-2">
+        <div class="agregar">
+            <button class="btn btn-outline-info">Agregar</button>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="../../../assets/svg/search.svg" alt="search">
+              </span>
+            </div>
+            <input type="text" class="form-control buscador" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+</ng-template>

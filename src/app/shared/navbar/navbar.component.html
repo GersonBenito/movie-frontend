@@ -34,15 +34,16 @@
                     Administracion
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item">Peliculas</a>
+                    <a class="dropdown-item" (click)="redirectTo('/administration/peliculas')">Peliculas</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">Usuarios</a>
+                    <a class="dropdown-item" (click)="redirectTo('/administration/usuarios')">Usuarios</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" (click)="redirectTo('/administration/categorias')">Categorias</a>
                 </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <div class="input-group mr-sm-2">
+            <div class="input-group mr-sm-2" *ngIf="viewSearch">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <img src="../../../assets/svg/search.svg" alt="search">

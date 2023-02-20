@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,10 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor( private router: Router ){ }
+  @Input() public viewSearch: boolean = true;
+
+  constructor( private router: Router ){ 
+    
+  }
 
   redirectTo(route: string){
     this.router.navigate([route]);
   }
+
 
 }

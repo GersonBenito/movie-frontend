@@ -1,0 +1,34 @@
+.contanedor-acciones{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.buscador{
+    &:focus{
+        outline: none !important;
+        box-shadow: none;
+    }
+}
+
+.acciones{
+    display: flex;
+    gap: 16px;
+    button{
+        gap: 8px;
+    }
+}
+
+.contenedor{
+    overflow-y: scroll;
+    height: 83vh;
+}
+
+.contenedor::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
