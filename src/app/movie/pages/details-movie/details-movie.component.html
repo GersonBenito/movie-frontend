@@ -52,8 +52,16 @@
                 <p>{{movie.titulo}}</p>
             </div>
             <div class="acciones">
-                <button (click)="alquilarMovie()" class="boton secundario">Alquilar</button>
-                <button (click)="comprarPelicula()" class="boton primario">Comprar</button>
+                <button 
+                    (click)="alquilarMovie()" 
+                    class="boton secundario"
+                    [disabled]="!movie.disponibilidad"
+                >Alquilar</button>
+                <button 
+                    (click)="comprarPelicula()" 
+                    class="boton primario" 
+                    [disabled]="!movie.disponibilidad"
+                >Comprar</button>
             </div>
             <div class="descripcion">
                 <div class="primary-subtitle mt-3">
