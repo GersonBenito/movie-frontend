@@ -36,7 +36,10 @@
                 <td>{{movie.disponibilidad === true ? 'Si':'No'}}</td>
                 <td>
                     <div class="acciones">
-                        <button class="boton secundario d-flex justify-content-center align-items-center">
+                        <button 
+                            class="boton secundario d-flex justify-content-center align-items-center"
+                            (click)="openDialog('update', movie)"
+                        >
                             <img src="assets/svg/update.svg" width="14" alt="update">
                             Actualizar
                         </button>
@@ -55,7 +58,7 @@
 <ng-template #acciones>
     <div class="contanedor-acciones mb-2">
         <div class="agregar">
-            <button class="btn btn-outline-info">Agregar</button>
+            <button class="btn btn-outline-info" (click)="openDialog('add')">Agregar</button>
         </div>
         <div class="input-group">
             <div class="input-group-prepend">

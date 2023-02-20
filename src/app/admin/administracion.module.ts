@@ -6,6 +6,8 @@ import { CategoriesAdministracionComponent } from './pages/categories-administra
 import { ViewAdminComponent } from './pages/view-admin/view-admin.component';
 import { AdministracionRoutingModule } from './administracion.routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { MovieModalComponent } from './pages/movie-modal/movie-modal.component';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     UsersAdministracionComponent,
     MoviesAdministracionComponent,
     CategoriesAdministracionComponent,
-    ViewAdminComponent
+    ViewAdminComponent,
+    MovieModalComponent,
   ],
   imports: [
     CommonModule,

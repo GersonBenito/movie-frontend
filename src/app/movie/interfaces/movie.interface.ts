@@ -1,10 +1,10 @@
 export interface Movie {
-    id_pelicula:         number;
+    id_pelicula?:        number | string;
     titulo:              string;
     descripcion:         string;
-    imagen:              string;
-    precio_compra:       number;
+    imagen:              string | ArrayBuffer;
+    precio_compra:       number | string;
     disponibilidad:      boolean;
-    stock:               number;
-    fecha_actualizacion: string;
+    stock:               number | string;
+    fecha_actualizacion: string | Date;
 }

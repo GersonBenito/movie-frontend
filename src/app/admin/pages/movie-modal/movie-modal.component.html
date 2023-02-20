@@ -1,0 +1,69 @@
+<div class="conetenedor-modal">
+    <div class="primary-subtitle text-dark mb-5">
+        Agregar pelicula
+    </div>
+    <ng-content *ngTemplateOutlet="agregar"></ng-content>
+</div>
+
+<ng-template #agregar>
+    <form [formGroup]="formPelicula" (ngSubmit)="agregarPelicula()">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Titulo</mat-label>
+            <input type="text" matInput formControlName="titulo">
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Precio compra</mat-label>
+            <input type="number" matInput formControlName="precio_compra">
+        </mat-form-field>
+        <div class="content mb-2">
+            <mat-slide-toggle formControlName="disponibilidad">
+                <div class="mt-2 ml-2">Disponible</div>
+            </mat-slide-toggle>
+        </div>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Stock</mat-label>
+            <input type="number" matInput formControlName="stock">
+        </mat-form-field>
+
+        <!-- cuando se va actualizar -->
+        <div class="contenedor-aupdate mb-3" *ngIf="imagenForm && data.accion === 'update'">
+            <div class="remover-imagen">
+                <img src="assets/svg/delete-image.svg" alt="image" (click)="mostrarImagenForm()">
+            </div>
+            <img [src]="imagenSeleccionado" alt="imagen">
+        </div>
+        <!-- subir imagen -->
+        <div class="upload mb-3" *ngIf="!imagenForm || data.accion === 'add'">
+            <div class="contenedor-upload">
+                <!-- image seleccionado -->
+                <div class="contenedor-imagen mb-2" *ngIf="seleccionado">
+                    <img [src]="imagenSeleccionado" alt="imagen">
+                </div>
+                <div class="acciones-imagen">
+                    <p>{{ seleccionado? file.name : 'Adjunta una imagen' }}</p>
+                    <img 
+                        src="{{seleccionado ? 'assets/svg/delete-image.svg': 'assets/svg/upload.svg'}}" alt="icono-imagen" 
+                        (click)="seleccionado ? removerImagen() : seleccionarImagen()">
+                </div>
+            </div>
+            <input type="file" formControlName="imagen" [accept]="imagenesAceptados" id="subir-imagen" class="subir">
+        </div>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Descripcion</mat-label>
+            <textarea type="text" matInput formControlName="descripcion"></textarea>
+        </mat-form-field>
+        <div class="acciones">
+            <button 
+                class="boton secundario"
+                type="button"
+                (click)="closeDialog()"
+            >
+                Cancelar
+            </button>
+            <button class="boton primario" type="submit" [disabled]="!formPelicula.valid">
+                Confirmar
+            </button>
+        </div>
+    </form>
+</ng-template>

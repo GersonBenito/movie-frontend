@@ -25,7 +25,7 @@ export class CardComponent {
 
   }
 
-  verDetalles(id: number): void {
+  verDetalles(id: string | number | undefined): void {
     this.router.navigate(['/movie/detalle', id]);
   }
 
