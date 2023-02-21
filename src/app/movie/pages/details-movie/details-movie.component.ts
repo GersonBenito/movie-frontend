@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/services/auth.service';
 import * as dataRaw from '../../../data/data.json';
 import { Movie } from '../../interfaces/movie.interface';
 
@@ -23,12 +25,29 @@ export class DetailsMovieComponent {
     stock: 0
   }
 
-  constructor( private aRouter: ActivatedRoute ){
+  public logueado: boolean = false;
+
+  constructor( 
+    private aRouter: ActivatedRoute,
+    private _authService: AuthService,
+    private toastr: ToastrService,
+  ){
     this.getDatailsMovie(this.aRouter.snapshot.params['id']);
+    this._authService.$isLogger.subscribe({
+      next: login =>{
+        if(login){
+          this.logueado = login;
+        }
+      }
+    }) 
   }
 
   likeMovie(): void{
-    this.like = this.like === false ? true : false;
+    if(this.logueado){
+      this.like = this.like === false ? true : false;
+    }else{
+      this.toastr.info('Para realizar esta acion necesitas estar logueado', 'Inicio de sesion');
+    }
   }
 
   getDatailsMovie(id: string){
@@ -41,13 +60,19 @@ export class DetailsMovieComponent {
   }
 
   comprarPelicula(){
-    console.log('comprar -->', this.movie);
-    
+    if(this.logueado){
+      console.log('comprando -->', this.logueado);
+    }else{
+      this.toastr.info('Para realizar esta acion necesitas estar logueado', 'Inicio de sesion');
+    }
   }
 
   alquilarMovie(){
-    console.log('alquilar -->', this.movie);
-    
+    if(this.logueado){
+      console.log('alquilando -->', this.logueado);
+    }else{
+      this.toastr.info('Para realizar esta acion necesitas estar logueado', 'Inicio de sesion');
+    }
   }
 
 }

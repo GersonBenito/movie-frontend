@@ -9,10 +9,10 @@
         <div class="formulario">
             <form [formGroup]="formLogin" (ngSubmit)="login()" autocomplete="off">
                 <div class="form-input">
-                    <input type="text" formControlName="email" placeholder="Email" autocomplete="off">
+                    <input type="text" formControlName="nombre_usuario" placeholder="nombre de usuario" autocomplete="off">
                 </div>
                 <div class="form-input">
-                    <input type="password" formControlName="password" placeholder="Password">
+                    <input type="password" formControlName="password" placeholder="contraseña">
                 </div>
                 <div class="forgot">
                     <span>Recuperar contraña</span>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="register">
-                    ¿No tienes una cuenta? <span (click)="register()">Registrate gratis</span>
+                    ¿No tienes una cuenta? <span (click)="showRegister()">Registrate gratis</span>
                 </div>
             </form>
         </div>

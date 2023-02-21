@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" (click)="redirectTo('')">
+    <a class="navbar-brand" (click)="redirectTo('home')">
         <img src="../../../assets/svg/logo.svg" width="24" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" (click)="redirectTo('')">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" (click)="redirectTo('home')">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" (click)="redirectTo('/movie')">Peliculas</a>
@@ -28,7 +28,7 @@
                     <a class="dropdown-item">Ciencia ficcion</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" *ngIf="showAdmin">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Administracion
@@ -45,18 +45,21 @@
         <form class="form-inline my-2 my-lg-0">
             <div class="input-group mr-sm-2" *ngIf="viewSearch">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <img src="../../../assets/svg/search.svg" alt="search">
-                  </span>
+                    <span class="input-group-text">
+                        <img src="../../../assets/svg/search.svg" alt="search">
+                    </span>
                 </div>
-                <input type="text" class="form-control buscador" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control buscador" placeholder="Buscar..." aria-label="Username"
+                    aria-describedby="basic-addon1">
             </div>
-
-            <button 
-                class="btn btn-outline-info my-2 my-sm-0 login" 
-                type="button" 
-                (click)="redirectTo('/auth')"
-                >
+            <ul class="navbar-nav mr-auto" *ngIf="logueado">
+                <li class="nav-item d-flex logout">
+                    <a class="nav-link">{{user.nombre_usuario}}</a>
+                    <img src="assets/svg/logout.svg" (click)="cerarSesion()" alt="salir">
+                </li>
+            </ul>
+            <button *ngIf="!logueado" class="btn btn-outline-info my-2 my-sm-0 login" type="button"
+                (click)="redirectTo('/auth')">
                 Loguearse
             </button>
         </form>

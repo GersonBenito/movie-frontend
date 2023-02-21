@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,19 +16,29 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private _authService: AuthService,
+    private toastr: ToastrService,
+    private router: Router,
   ){
 
     this.formLogin = this.fb.group({
-      email: [ '', [Validators.required, Validators.email]],
+      nombre_usuario: [ '', Validators.required],
       password: ['', [Validators.required, Validators.minLength(4)]]
     });
   }
 
   login(): void{
-    console.log(this.formLogin.value);
+    this._authService.iniciarSesion(this.formLogin.value).subscribe({
+      next: (response) =>{
+        this.toastr.success(response.mensaje, 'Inicio de sesion');
+        this.router.navigate(['home'])
+      },
+      error: ({error}) =>{
+        this.toastr.error(error.mensaje, 'Inicio de sesion');
+      }
+    });
   }
 
-  register(){
+  showRegister(){
     this._authService.$typeView.next('register');
   }
 

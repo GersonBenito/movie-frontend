@@ -46,6 +46,7 @@ $family: 'Poppins', sans-serif;
     line-height: 26px;
     color: #FCFCFC;
     border-radius: 5px;
+    outline: none !important;
     cursor: pointer;
 
     &:disabled{

@@ -21,3 +21,10 @@
     background-color: rgba(41, 41, 41, 0.39);
     backdrop-filter: blur(50px);
 }
+
+@media (max-width: 768px){
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}

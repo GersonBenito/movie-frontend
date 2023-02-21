@@ -1,6 +1,6 @@
 <div class="conetenedor-modal">
     <div class="primary-subtitle text-dark mb-5">
-        Agregar pelicula
+        {{ data.accion === 'update' ? 'Actualizar' : 'Agregar'}} pelicula
     </div>
     <ng-content *ngTemplateOutlet="agregar"></ng-content>
 </div>
@@ -62,7 +62,7 @@
                 Cancelar
             </button>
             <button class="boton primario" type="submit" [disabled]="!formPelicula.valid">
-                Confirmar
+                {{ data.accion === 'update' ? 'Confirmat' : 'Agregar'}}
             </button>
         </div>
     </form>
