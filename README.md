@@ -1,6 +1,6 @@
 # MovieFrontend
 
-Instalar dependencias run `ng serve`
+Instalar dependencias run `npm i`
 
 ## Development server
 
